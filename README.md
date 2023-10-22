@@ -1,2 +1,3 @@
 # otvRac
-Repozitorij za laboratorijske vježbe iz predmeta Otvoreno računarstvo,
+Repozitorij za laboratorijske vježbe iz predmeta Otvoreno računarstvo
+Tomislav Grudić
