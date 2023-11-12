@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" descrict>
+    <meta name="author" content="Tomislav Grudić">
+    <meta name="description" content="web aplikacija koja sadrži otvoren skup podataka o nagradama oscar dodijeljenih na različitim oscar ceremonijama ">
+    <title>Oscars Datatable</title>
+    <script th:src="@{/datatable.js}"></script>
+    <link rel="stylesheet" type="text/css" href="/datatableStyle.css" />
+</head>
+<body>
+<div id="contentDiv">
+    <div id="tableDiv">
+    <table id="filteredDataTable">  </table>
+    </div>
+    <div id="formDiv">
+        <form th:action="@{'/dataquery'}" method="get" id="filterform">
+            <div id="searchDiv">
+                Search: <input type="text" name="keyword" id="keyword" size="50" value="" />
+                <input type="button" value="Clear" id="btnClear" />
+            </div>
+            <br>
+            <label for="selectOption">Search by attribute:</label>
+            <br>
+            <select id="selectOption" name="selectOption">
+                <option value="wildcard" name="wildcard">All attributes (wildcard)</option>
+                <option value="nazivCeremonije" name="nazivCeremonije">nazivCeremonije</option>
+                <option value="datumCeremonije" name="datumCeremonije">datumCeremonije</option>
+                <option value="lokacijaCeremonije" name="lokacijaCeremonije">lokacijaCeremonije</option>
+                <option value="kategorijaNagrade" name="kategorijaNagrade">kategorijaNagrade</option>
+                <option value="film" name="film">film</option>
+                <option value="dobitnikIme" name="dobitnikIme">dobitnikIme</option>
+                <option value="dobitnikPrezime" name="dobitnikPrezime">dobitnikPrezime</option>
+                <option value="dobitnikDatumrod" name="dobitnikDatumrod">dobitnikDatumrod</option>
+                <option value="imeLikaUFilmu" name="imeLikaUFilmu">imeLikaUFilmu</option>
+                <option value="redatelj" name="redatelj">redatelj</option>
+            </select>
+            <input type="submit" value="Submit" />
+        </form>
+        <br>
+        <div id = "downloadDiv">
+            <a th:attr="href=@{'/download/oscarsFilteredJSON'}" >Download filtered JSON</a>
+            <br>
+            <br>
+            <a th:attr="href=@{'/download/oscarsFilteredCSV'}" >Download filtered CSV</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Tomislav Grudić">
+    <meta name="description" content="web aplikacija koja sadrži otvoren skup podataka o nagradama oscar dodijeljenih na različitim oscar ceremonijama ">
+    <title>Oscars Open Data</title>
+    <link rel="stylesheet" type="text/css" href="/indexStyle.css" />
+</head>
+<body>
+<div>
+    <h1 id="otvoreni-skup-podataka-dodjela-nagrade-oscar">Otvoreni skup podataka - dodjela nagrade Oscar</h1>
+    <p>Baza podataka sadržana u ovom repozitoriju sadrži informacije o dodjelama nagrada Oscar za glumu  na ceremonijama 2004.,2005. i 2007. godine.
+        Podaci sadržani u bazi su uzeti sa stranice wikipedia.org gdje su podaci licencirani otvorenom licencom &quot;Creative Commons Attribution-ShareAlike 4.0 International License&quot;.</p>
+    <table>
+        <thead>
+        <tr>
+            <th>O skupu podataka:</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Licenca:</td>
+            <td>Creative Commons Attribution-ShareAlike 4.0 International License</td>
+        </tr>
+        <tr>
+            <td>Verzija podataka:</td>
+            <td>Release 1.0.</td>
+        </tr>
+        <tr>
+            <td>Autor:</td>
+            <td>Tomislav Grudić</td>
+        </tr>
+        <tr>
+            <td>Jezik:</td>
+            <td>hrvatski</td>
+        </tr>
+        </tbody>
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th>Atribut:</th>
+            <th>opis</th>
+            <th>tip podatka</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>naziv_ceremonije</td>
+            <td>naziv ceremonije Oscar</td>
+            <td>varchar()</td>
+        </tr>
+        <tr>
+            <td>datum_ceremonije</td>
+            <td>datum ceremonije Oscar</td>
+            <td>date</td>
+        </tr>
+        <tr>
+            <td>lokacija_ceremonije</td>
+            <td>mjesto održavanja ceremonije Oscar</td>
+            <td>varchar()</td>
+        </tr>
+        <tr>
+            <td>kategorija_nagrade</td>
+            <td>kategorija može biti: Najbolji glumac, Njabolji sporedni glumac, Najbolja glumica, Najbolja sporedna glumica</td>
+            <td>varchar()</td>
+        </tr>
+        <tr>
+            <td>dobitnik_ime</td>
+            <td>ime dobitnika nagrade Oscar</td>
+            <td>varchar()</td>
+        </tr>
+        <tr>
+            <td>dobitnik_prezime</td>
+            <td>prezime dobitnika nagrade Oscar</td>
+            <td>varchar()</td>
+        </tr>
+        <tr>
+            <td>dobitnik_datumrod</td>
+            <td>datum rođenja dobitnika nagrade Oscar</td>
+            <td>date</td>
+        </tr>
+        <tr>
+            <td>film</td>
+            <td>ime filma za koji je dobitnik nagrađen</td>
+            <td>varchar()</td>
+        </tr>
+        <tr>
+            <td>ime_lika_u_filmu</td>
+            <td>ime lika u filmu kojeg je dobitnik nagrade portretirao</td>
+            <td>varchar()</td>
+        </tr>
+        <tr>
+            <td>redatelj</td>
+            <td>redatelj filma za koji je dobitnik nagrađen</td>
+            <td>varchar()</td>
+        </tr>
+        </tbody>
+    </table>
+    <h1 id="odnos-i-povezanost-atributa">Odnos i povezanost atributa</h1>
+    <p>Odnos roditelj-dijete : ceremonija (naziv_ceremonije,datum_ceremonije,lokacija_ceremonije) ima više dodijeljenih nagrada Oscar, a svaka nagrada sadrži podatak (kategorija_nagrade,dobitnik_ime, dobitnik_prezime,dobitnik_datumrod,film,ime_lika_u_filmu,redatelj)</p><div/>
+    <br>
+    <div id="links">
+<a th:attr="href=@{'/download/oscarsJSON'}" >Download JSON</a>
+<a th:attr="href=@{'/download/oscarsCSV'}" >Download CSV</a>
+        <br>
+<a th:attr="href=@{'/datatable'}" >Kliknite za filtrirani prikaz podataka</a>
+    </div>
+</body>
+</html>
