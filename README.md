@@ -13,6 +13,7 @@ Podaci sadržani u bazi su uzeti sa stranice wikipedia.org gdje su podaci licenc
 
 |Atribut:| opis| tip podatka |
 |---|----|----|
+|id| id zapisa | bigint |
 |naziv_ceremonije| naziv ceremonije Oscar | varchar() |
 |datum_ceremonije| datum ceremonije Oscar |  date |
 |lokacija_ceremonije| mjesto održavanja ceremonije Oscar | varchar() |
