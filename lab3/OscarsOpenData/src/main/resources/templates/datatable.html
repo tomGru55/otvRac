@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8" descrict>
+    <meta name="author" content="Tomislav Grudić">
+    <meta name="description"
+        content="web aplikacija koja sadrži otvoren skup podataka o nagradama oscar dodijeljenih na različitim oscar ceremonijama ">
+    <title>Oscars Datatable</title>
+    <script th:src="@{/datatable.js}"></script>
+    <link rel="stylesheet" type="text/css" href="/datatableStyle.css" />
+    <!--vrati putanju na  /datatableStyle.css-->
+</head>
+
+<body>
+    <div class="wallpaper">
+        <img src="/photos/oscarVertical.webp">
+    </div>
+    <div id="tableDiv">
+        <table id="filteredDataTable">
+
+        </table>
+    </div>
+    <div id="formDiv">
+        <form th:action="@{'/dataquery'}" method="get" id="filterform">
+            <div id="searchDiv">
+                Search: <input type="text" name="keyword" id="keyword" size="50" value="" />
+                <input type="button" value="Clear" id="btnClear" />
+            </div>
+            <select id="selectOption" name="selectOption">
+                <option value="wildcard" name="wildcard">All attributes (wildcard)</option>
+                <option value="id" name="wildcard">ID zapisa</option>
+                <option value="nazivCeremonije" name="nazivCeremonije">Naziv ceremonije</option>
+                <option value="datumCeremonije" name="datumCeremonije">Datum ceremonije</option>
+                <option value="lokacijaCeremonije" name="lokacijaCeremonije">Lokacija ceremonije</option>
+                <option value="kategorijaNagrade" name="kategorijaNagrade">Kategorija nagrade</option>
+                <option value="film" name="film">Film</option>
+                <option value="dobitnikIme" name="dobitnikIme">Ime dobitnika</option>
+                <option value="dobitnikPrezime" name="dobitnikPrezime">Prezime dobitnika</option>
+                <option value="dobitnikDatumrod" name="dobitnikDatumrod">Datum rođenja dobitnika</option>
+                <option value="imeLikaUFilmu" name="imeLikaUFilmu">Ime lika u filmu</option>
+                <option value="redatelj" name="redatelj">Redatelj</option>
+            </select>
+            <input type="submit" value="Submit" />
+        </form>
+        <br>
+        <div id="downloadDiv">
+            <a th:attr="href=@{'/download/oscarsFilteredJSON'}">Download filtered JSON</a>
+            <br>
+            <br>
+            <a th:attr="href=@{'/download/oscarsFilteredCSV'}">Download filtered CSV</a>
+            <br><br>
+            <a th:attr="href=@{'/download/openapi'}">Download OpenAPI specification</a>
+        </div>
+        <div id="optionsDiv">
+            <br>
+            <input type="button" value="Insert new record" id="openInsertPopup">
+        </div>
+        <div></div>
+    </div>
+
+
+    <div id="insertRecordPopup">
+        <form id="insertRecordForm">
+            <table>
+                <tr>
+                    <td><label for="nazivCeremonijeInsert">Naziv ceremonije</label></td>
+                    <td><label for="datumCeremonijeInsert">Datum ceremonije</label></td>
+                    <td><label for="lokacijaCeremonijeInsert">Lokacija ceremonije</label></td>
+                    <td> <label for="kategorijaNagradeInsert">Kategorija nagrade</label></td>
+                    <td> <label for="filmInsert">Naziv filma</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="nazivCeremonijeInsert" required></td>
+                    <td><input type="text" name="datumCeremonijeInsert" required></td>
+                    <td><input type="text" name="lokacijaCeremonijeInsert" required></td>
+                    <td><input type="text" name="kategorijaNagradeInsert" required></td>
+                    <td><input type="text" name="filmInsert" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dobitnikImeInsert">Dobitnik ime</label></td>
+                    <td><label for="dobitnikPrezimeInsert">Dobitnik prezime</label></td>
+                    <td><label for="dobitnikDatumrodInsert">Dobitnik datum rođenja</label></td>
+                    <td><label for="imeLikaUFilmuInsert">Ime lika u filmu</label></td>
+                    <td><label for="redateljInsert">Redatelj</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="dobitnikImeInsert" required></td>
+                    <td><input type="text" name="dobitnikPrezimeInsert" required></td>
+                    <td><input type="text" name="dobitnikDatumrodInsert" required></td>
+                    <td><input type="text" name="imeLikaUFilmuInsert" required></td>
+                    <td> <input type="text" name="redateljInsert" required></td>
+                </tr>
+            </table>
+            <div id="insertBtns">
+                <br>
+                <input type="submit" id="insertBtn" value="Insert">
+                <input type=button value="Cancel" id="cancelInsertBtn">
+            </div>
+        </form>
+    </div>
+
+    <div id="updateRecordPopup">
+        <form id="updateRecordForm">
+            <table>
+                <tr>
+                    <td><label for="nazivCeremonijeUpdate">Naziv ceremonije</label></td>
+                    <td><label for="datumCeremonijeUpdate">Datum ceremonije</label></td>
+                    <td><label for="lokacijaCeremonijeUpdate">Lokacija ceremonije</label></td>
+                    <td> <label for="kategorijaNagradeUpdate">Kategorija nagrade</label></td>
+                    <td><label for="filmUpdate">Naziv filma</label></td>
+                </tr>
+                <tr class="updateTextFields">
+                    <td><input type="text" name="nazivCeremonijeUpdate" required></td>
+                    <td><input type="text" name="datumCeremonijeUpdate" required></td>
+                    <td><input type="text" name="lokacijaCeremonijeUpdate" required></td>
+                    <td><input type="text" name="kategorijaNagradeUpdate" required></td>
+                    <td><input type="text" name="filmUpdate" required></td>
+                </tr>
+                <tr> 
+                    
+                    <td><label for="dobitnikImeUpdate">Dobitnik ime</label></td>
+                    <td><label for="dobitnikPrezimeUpdate">Dobitnik prezime</label></td>
+                    <td><label for="dobitnikDatumrodUpdate">Dobitnik datum rođenja</label></td>
+                    <td><label for="imeLikaUFilmuUpdate">Ime lika u filmu</label></td>
+                    <td><label for="redateljUpdate">Redatelj</label></td>
+                </tr>
+                <tr class="updateTextFields">
+                    <td><input type="text" name="dobitnikImeUpdate" required></td>
+                    <td><input type="text" name="dobitnikPrezimeUpdate" required></td>
+                    <td><input type="text" name="dobitnikDatumrodUpdate" required></td>
+                    <td><input type="text" name="imeLikaUFilmuUpdate" required></td>
+                    <td> <input type="text" name="redateljUpdate" required></td>
+                </tr>
+            </table>
+            <div id="updateBtns">
+                <br>
+                <input type="button" id="cancelUpdateBtn" value="Cancel">
+                <input type="submit" id="updateBtn" value="Update">
+            </div>
+            
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

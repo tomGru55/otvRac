@@ -1,0 +1,328 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Swagger Petstore - OpenAPI 3.0",
+    "description": "Otvoreni podaci oscar",
+    "version": "1.0.11"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/datatable"
+    }
+  ],
+  "paths": {
+    "/dataquery": {
+      "get": {
+        "summary": "Vraća zapise koji zadovoljavaju uvjet",
+        "parameters": [
+          {
+            "name": "keyword",
+            "in": "query",
+            "description": "Keyword parameter",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "selectOption",
+            "in": "query",
+            "description": "Select option parameter",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/oscars"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataquery/getAll": {
+      "get": {
+        "summary": "Vraća sve zapise",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/oscars"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataquery/getById/{id}": {
+      "get": {
+        "summary": "Vraća zapis s ID-om",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID zapisa",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/oscars"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Record not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataquery/getByName/{name}": {
+      "get": {
+        "summary": "Vraća zapis s imenom = name",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "description": "first name atribut zapisa",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/oscars"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Record not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataquery/getBylastName/{lastName}": {
+      "get": {
+        "summary": "Vraća zapis s prezimenom = lastName",
+        "parameters": [
+          {
+            "name": "lastName",
+            "in": "path",
+            "description": "last name atribut zapisa",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/oscars"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Record not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/errorResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/dataquery/create": {
+      "post": {
+        "summary": "Stvara novi zapis",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/oscars"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/oscars"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/delete/{id}": {
+      "delete": {
+        "summary": "Briše zapis",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID zapisa",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/update/{id}": {
+      "put": {
+        "summary": "Osvježava zapis",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "ID zapisa",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/oscars"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/oscars"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "oscars": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "nazivCeremonije": {
+            "type": "string"
+          },
+          "datumCeremonije": {
+            "type": "string"
+          },
+          "lokacijaCeremonije": {
+            "type": "string"
+          },
+          "kategorijaNagrade": {
+            "type": "string"
+          },
+          "film": {
+            "type": "string"
+          },
+          "dobitnikIme": {
+            "type": "string"
+          },
+          "dobitnikPrezime": {
+            "type": "string"
+          },
+          "dobitnikDatumrod": {
+            "type": "string"
+          },
+          "imeLikaUFilmu": {
+            "type": "string"
+          },
+          "redatelj": {
+            "type": "string"
+          }
+        }
+      },
+      "errorResponse": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

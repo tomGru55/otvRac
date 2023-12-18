@@ -1,0 +1,157 @@
+
+body{
+    margin: 0; 
+    padding: 0;
+    background-color:black;
+    text-emphasis-color: white;
+    color: rgb(243, 243, 243);
+    text-align: center;
+    font-weight: lighter;
+
+    display: flex;
+    flex-direction: row;
+    min-height: 100%;
+}
+
+#tableDiv{
+margin-right: 0.5vw;
+}
+
+table{
+    border: solid white 2px;
+    background-color: rgb(51, 51, 51);
+    border-collapse: collapse;
+}
+th{
+    padding: 3px;
+    border-bottom: solid white 3px;
+    background-color: rgb(39, 39, 39);
+}
+td{
+    padding: 5px;
+    border: 1px solid white;
+}
+
+.wallpaper img{
+    height: 1000px;
+    object-fit: cover;
+    max-height:100%; 
+    max-width:100%;
+}
+.wallpaper{
+    background-color: black;
+    min-height: 100vh;
+    width: 20vw;
+    object-fit: contain;
+}
+
+
+
+#formDiv{
+    font-weight: bold;
+    margin-top: 2vh;
+    margin-right: 0.5vw;
+    font-size: x-large;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(99, 0, 0);
+    border-radius: 5px;
+    height: 50vh;
+}
+#searchDiv{
+    
+    padding: 4px;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+}
+input[type="text"] {
+    border-radius: 5px;
+    width: 10vw;
+    font-weight: bold;
+    color: black;
+}
+input[type="button"] {
+    border-radius: 6px;
+    width: 4vw;
+    color: antiquewhite;
+    font-weight: bold;
+    background-color: rgb(39, 39, 39);
+}
+#selectOption{
+    text-align: center;
+    height: 4vh;
+    width: 12vw;
+    font-weight: bold;
+    color: antiquewhite;
+     background-color: rgb(39, 39, 39);
+}
+option{
+    font-weight: bold;
+    color: antiquewhite;
+}
+input[type="submit"] , button{
+    border-radius: 6px;
+    width: 4vw;
+    color: antiquewhite;
+    font-weight: bold;
+    background-color: rgb(39, 39, 39);
+}
+#downloadDiv{
+    font-weight: normal;
+    border: 2px solid black;
+    padding: 2vw;
+    background-color: grey;
+}
+#optionsDiv{
+display: flex;
+flex-direction: column;
+
+}
+#optionsDiv input[type="button"] {
+    
+    height: 4vh;
+    width: 20vw;
+    color: antiquewhite;
+    font-weight: bold;
+    background-color: rgb(39, 39, 39);
+}
+#insertRecordPopup, #updateRecordPopup{
+    
+    max-width: 80vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 23vh;
+    transform: translate(-50%, -50%);
+    padding: 2vh;
+    border: solid black 3px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(78, 0, 0);
+}
+
+#insertRecordForm, #updateRecordForm{
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    width: 100%;
+}
+
+#insertRecordForm td, #updateRecordForm td{
+    height: 1vh;
+    width: 1vw;
+    border: none;
+    background-color: rgb(51, 51, 51);
+    border-collapse: collapse;
+}
+
+#updateRecordPopup{
+    display: none;
+}
+#insertRecordPopup{
+    display: none;
+}
+
