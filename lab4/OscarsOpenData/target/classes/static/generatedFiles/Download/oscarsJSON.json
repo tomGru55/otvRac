@@ -1,0 +1,289 @@
+[ {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 1,
+  "naziv_ceremonije" : "76th Academy awards",
+  "datum_ceremonije" : "2004-02-29",
+  "lokacija_ceremonije" : "Kodak theatre, Los Angeles",
+  "nagrade" : {
+    "kategorija_nagrade" : "Najbolji glumac",
+    "film" : "Mystic River",
+    "ime_lika_u_filmu" : "Jimmy Markum",
+    "redatelj" : "Clint Eastwood",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "Sean",
+      "dobitnik_prezime" : "Penn",
+      "dobitnik_datumrod" : "1960-08-17"
+    }
+  }
+}, {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 2,
+  "naziv_ceremonije" : "76th Academy awards",
+  "datum_ceremonije" : "2004-02-29",
+  "lokacija_ceremonije" : "Kodak theatre, Los Angeles",
+  "nagrade" : {
+    "kategorija_nagrade" : "Najbolji sporedni glumac",
+    "film" : "Mystic River",
+    "ime_lika_u_filmu" : "Dave Boyle",
+    "redatelj" : "Clint Eastwood",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "Tim",
+      "dobitnik_prezime" : "Robbins",
+      "dobitnik_datumrod" : "1958-10-16"
+    }
+  }
+}, {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 3,
+  "naziv_ceremonije" : "76th Academy awards",
+  "datum_ceremonije" : "2004-02-29",
+  "lokacija_ceremonije" : "Kodak theatre, Los Angeles",
+  "nagrade" : {
+    "kategorija_nagrade" : "Najbolja glumica",
+    "film" : "Monster",
+    "ime_lika_u_filmu" : "Alien Wuornos",
+    "redatelj" : "Patty Jenkins",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "Charlize",
+      "dobitnik_prezime" : "Theron",
+      "dobitnik_datumrod" : "1975-08-07"
+    }
+  }
+}, {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 4,
+  "naziv_ceremonije" : "76th Academy awards",
+  "datum_ceremonije" : "2004-02-29",
+  "lokacija_ceremonije" : "Kodak theatre, Los Angeles",
+  "nagrade" : {
+    "kategorija_nagrade" : "Najbolja sporedna glumica",
+    "film" : "Cold mountain",
+    "ime_lika_u_filmu" : "Ruby Thewes",
+    "redatelj" : "Anthony Minghella",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "Renée ",
+      "dobitnik_prezime" : "Zellweger ",
+      "dobitnik_datumrod" : "1969-04-25"
+    }
+  }
+}, {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 5,
+  "naziv_ceremonije" : "77th Academy awards",
+  "datum_ceremonije" : "2005-02-27",
+  "lokacija_ceremonije" : "Kodak theatre, Los Angeles",
+  "nagrade" : {
+    "kategorija_nagrade" : "Najbolji glumac",
+    "film" : "Ray",
+    "ime_lika_u_filmu" : "Ray Charles",
+    "redatelj" : "Taylor Hackford",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "Jamie",
+      "dobitnik_prezime" : "Fox",
+      "dobitnik_datumrod" : "1967-12-13"
+    }
+  }
+}, {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 6,
+  "naziv_ceremonije" : "77th Academy awards",
+  "datum_ceremonije" : "2005-02-27",
+  "lokacija_ceremonije" : "Kodak theatre, Los Angeles",
+  "nagrade" : {
+    "kategorija_nagrade" : "Najbolji sporedni glumac",
+    "film" : "Million Dollar Baby",
+    "ime_lika_u_filmu" : "Eddie Scrap-Iron Duprist",
+    "redatelj" : "Clint Eastwood",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "Morgan",
+      "dobitnik_prezime" : "Freeman",
+      "dobitnik_datumrod" : "1937-06-01"
+    }
+  }
+}, {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 7,
+  "naziv_ceremonije" : "77th Academy awards",
+  "datum_ceremonije" : "2005-02-27",
+  "lokacija_ceremonije" : "Kodak theatre, Los Angeles",
+  "nagrade" : {
+    "kategorija_nagrade" : "Najbolja glumica",
+    "film" : "Million Dollar Baby",
+    "ime_lika_u_filmu" : "Margaret Maggie Fitzgerald",
+    "redatelj" : "Clint Eastwood",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "Hillary",
+      "dobitnik_prezime" : "Swank",
+      "dobitnik_datumrod" : "1974-06-30"
+    }
+  }
+}, {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 8,
+  "naziv_ceremonije" : "77th Academy awards",
+  "datum_ceremonije" : "2005-02-27",
+  "lokacija_ceremonije" : "Kodak theatre, Los Angeles",
+  "nagrade" : {
+    "kategorija_nagrade" : "Najbolja sporedna glumica",
+    "film" : "The Aviator",
+    "ime_lika_u_filmu" : "Katherine Hepburn",
+    "redatelj" : "Martin Scorsese",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "Cate",
+      "dobitnik_prezime" : "Blanchett",
+      "dobitnik_datumrod" : "1969-05-14"
+    }
+  }
+}, {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 9,
+  "naziv_ceremonije" : "78th Academy awards",
+  "datum_ceremonije" : "2006-04-05",
+  "lokacija_ceremonije" : "Kodak theatre, Los Angeles",
+  "nagrade" : {
+    "kategorija_nagrade" : "Najbolji glumac",
+    "film" : "Capote",
+    "ime_lika_u_filmu" : "Truman Capote",
+    "redatelj" : "Bennet Miller",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "Phillip Seymour",
+      "dobitnik_prezime" : "Hoffman",
+      "dobitnik_datumrod" : "1967-06-23"
+    }
+  }
+}, {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 10,
+  "naziv_ceremonije" : "78th Academy awards",
+  "datum_ceremonije" : "2006-04-05",
+  "lokacija_ceremonije" : "Kodak theatre, Los Angeles",
+  "nagrade" : {
+    "kategorija_nagrade" : "Najbolji sporedni glumac",
+    "film" : "Syriana",
+    "ime_lika_u_filmu" : "Bob Barnest",
+    "redatelj" : "Stephen Gaghan",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "George",
+      "dobitnik_prezime" : "Clooney",
+      "dobitnik_datumrod" : "1961-05-06"
+    }
+  }
+}, {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 902,
+  "naziv_ceremonije" : "a",
+  "datum_ceremonije" : "a",
+  "lokacija_ceremonije" : "a",
+  "nagrade" : {
+    "kategorija_nagrade" : "a",
+    "film" : "a",
+    "ime_lika_u_filmu" : "a",
+    "redatelj" : "a",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "a",
+      "dobitnik_prezime" : "a",
+      "dobitnik_datumrod" : "a"
+    }
+  }
+}, {
+  "@context" : {
+    "@vocab" : "http://schema.org/",
+    "dobitnik_ime" : "givenName",
+    "dobitnik_prezime" : "familyName",
+    "dobitnik_datumrod" : "birthDate",
+    "dobitnik" : "Person"
+  },
+  "id" : 11,
+  "naziv_ceremonije" : "78th Academy awards",
+  "datum_ceremonije" : "2006-04-05",
+  "lokacija_ceremonije" : "Kodak theatre, Los Angeles",
+  "nagrade" : {
+    "kategorija_nagrade" : "Najbolja glumica",
+    "film" : "Walk the line",
+    "ime_lika_u_filmu" : "June Carter Cash",
+    "redatelj" : "James Mangold",
+    "dobitnik" : {
+      "@type" : "Person",
+      "dobitnik_ime" : "Reese",
+      "dobitnik_prezime" : "Whiterspoon",
+      "dobitnik_datumrod" : "1976-04-22"
+    }
+  }
+} ]

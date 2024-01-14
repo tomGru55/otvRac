@@ -1,0 +1,94 @@
+{
+  "$id": "",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "@context": {
+        "type": "object",
+        "description": "definira semantiku podataka uz pomoc JSON LD",
+        "properties": {
+          "@vocab": {
+            "type": "string"
+          },
+          "dobitnik_ime": {
+            "type": "string"
+          },
+          "dobitnik_prezime": {
+            "type": "string"
+          },
+          "dobitnik_datumrod": {
+            "type": "string"
+          },
+          "dobitnik": {
+            "type": "string"
+          }
+        }
+      },
+      "id": {
+        "type": "number",
+        "description": "generirani id zapisa"
+      },
+      "naziv_ceremonije": {
+        "type": "string",
+        "description": "naziv ceremonije oscar"
+      },
+      "datum_ceremonije": {
+        "type": "string",
+        "format": "date",
+        "description": "datum ceremonije Oscar"
+      },
+      "lokacija_ceremonije": {
+        "type": "string",
+        "description": "mjesto održavanja ceremonije Oscar"
+      },
+      "nagrade": {
+        "type": "object",
+        "properties": {
+          "kategorija_nagrade": {
+            "type": "string",
+            "description": "kategorija može biti: Najbolji glumac, Njabolji sporedni glumac, Najbolja glumica, Najbolja sporedna glumica"
+          },
+          "film": {
+            "type": "string",
+            "description": "ime filma za koji je dobitnik nagrađen"
+          },
+          "dobitnik": {
+            "type": "object",
+            "description": "tip objekta Person iz schema.org, dobitnik nagrade",
+            "properties": {
+              "@type": {
+                "type": "string"
+              },
+              "dobitnik_ime": {
+                "type": "string",
+                "description": "ime dobitnika nagrade Oscar"
+              },
+              "dobitnik_prezime": {
+                "type": "string",
+                "description": "prezime dobitnika nagrade Oscar"
+              },
+              "dobitnik_datumrod": {
+                "type": "string",
+                "format": "date",
+                "description": "datum rođenja dobitnika nagrade Oscar"
+              }
+            }
+          },
+          "ime_lika_u_filmu": {
+            "type": "string",
+            "description": "ime lika u filmu kojeg je dobitnik nagrade portretirao"
+          },
+          "redatelj": {
+            "type": "string",
+            "description": "redatelj filma za koji je dobitnik nagrađen"
+          }
+        },
+        "description": "skup dodijeljenih nagrada na određenoj ceremoniji, na svakoj ceremoniji se dodjeljuje 4 nagrada"
+      }
+    }
+  },
+  "title": "Oscars Open Data",
+  "description": "otvoreni skup podataka koji sadrži podatke o dodjelama nagrade oscar za glumu na ceremonijama oscar"
+}
