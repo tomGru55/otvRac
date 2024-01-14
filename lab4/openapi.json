@@ -43,7 +43,33 @@
             }
           }
         }
+      },
+      "post": {
+        "summary": "Stvara novi zapis",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/oscars"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/oscars"
+                }
+              }
+            }
+          }
+        }
       }
+      
     },
 
     "/datatable/filtered": {
@@ -137,43 +163,6 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/errorResponse"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "summary": "Stvara novi zapis",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "description": "ID zapisa",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int64"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/oscars"
-              }
-            }
-          },
-          "required": true
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/oscars"
                 }
               }
             }
