@@ -1,5 +1,5 @@
 {
-  "$id": "",
+  "$id": "https://github.com/tomGru55/otvRac/blob/main/lab4/oscarsJSON.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "array",
   "items": {
